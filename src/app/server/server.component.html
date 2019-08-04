@@ -1,14 +1,22 @@
-<p>server works! 
+<p>
+<b>Data interpolation</b>
     <br>
     Server id  = {{serverId}}
     <br>
    <!--Server Status= {{serverStatus}}--> 
+   <!--by function-->
     Server Status = {{getServerStatus()}}
     <button [disabled]="!allowNewServer">Save</button>
 </p>
-<p>{{allowNewServer}}</p>
+
+<!--<p>{{allowNewServer}}</p>-->
+<b>Property interpolation</b>
 <p [innerText]="allowNewServer">{{allowNewServer}}</p>
 <!--
     do not use below code
     <p [innerText]="{{allowNewServer}}"></p>
 -->
+<b>Event interpolation</b> <br>
+<button [disabled]="!allowNewServer"
+ (click)="onCreatedServer()">Add New Server</button>
+ <p>{{serverCreationStatus}}</p>
