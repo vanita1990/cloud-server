@@ -2,5 +2,13 @@
     <br>
     Server id  = {{serverId}}
     <br>
-    Server Status= {{serverStatus}}
+   <!--Server Status= {{serverStatus}}--> 
+    Server Status = {{getServerStatus()}}
+    <button [disabled]="!allowNewServer">Save</button>
 </p>
+<p>{{allowNewServer}}</p>
+<p [innerText]="allowNewServer">{{allowNewServer}}</p>
+<!--
+    do not use below code
+    <p [innerText]="{{allowNewServer}}"></p>
+-->
